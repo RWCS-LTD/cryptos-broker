@@ -34,9 +34,9 @@ one table:
 | Proven | **5** |
 | **Retired / removed** | **35** |
 | **Underperforming, still listed** | **12** |
-| Forward paper trades recorded | **2,262** |
+| Forward paper trades recorded | **2,263** |
 | Evaluated strategies that are net positive | **14 of 31** |
-| **Average net result across all evaluated** | **-9.5%** |
+| **Average net result across all evaluated** | **-9.6%** |
 <!-- /LIVE:record -->
 
 That average is negative, it is at the top of this README, and it is
@@ -96,7 +96,7 @@ Real data to anonymous callers. No sign-up, no key, no email. Every endpoint her
 verified to return `200` to a fresh anonymous request from the open internet.
 
 <!-- LIVE:market -->
-**308 live markets** · **$13.6B** open interest · **9,135** quality-scored traders tracked of 18,232
+**308 live markets** · **$13.7B** open interest · **9,135** quality-scored traders tracked of 18,232
 <!-- /LIVE:market -->
 
 | What | Where |
