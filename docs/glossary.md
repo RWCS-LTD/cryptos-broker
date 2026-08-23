@@ -5,8 +5,8 @@ someone with no institutional background and no inside connections — which is
 most people, and the whole reason the platform exists.
 
 If you want this properly rather than as reference cards, the free
-[102-lesson Campus](https://cryptos.broker/campus) covers the same ground in
-order, with no account required.
+[CRYPTOS Campus](https://cryptos.broker/campus) covers the same ground in order,
+with no account required.
 
 **Contents:** [Perpetual futures](#perpetual-futures) ·
 [Open interest](#open-interest-oi) · [Funding rate](#funding-rate) ·
@@ -151,8 +151,8 @@ The concept is frequently abused. Two things make it meaningful rather than
 decorative:
 
 1. **Quality scoring** — a wallet must clear a performance bar before it counts,
-   otherwise you are tracking noise with an impressive name. CRYPTOS tracks
-   18,000+ wallets and scores roughly half as qualified.
+   otherwise you are tracking noise with an impressive name. CRYPTOS tracks tens
+   of thousands of wallets and qualifies only a fraction of them.
 2. **Consensus, not individuals** — one whale is an anecdote. Agreement *across*
    scored wallets is the actual signal.
 
@@ -271,7 +271,7 @@ have been tuned to data that did not exist yet. It is also the slowest, which is
 why it is rare to see published.
 
 CRYPTOS forward-tracks every listed strategy and publishes the running record —
-2,200+ paper trades, winners and losers, at
+thousands of paper trades, winners and losers, at
 [`/api/strategies`](https://cryptos.broker/api/strategies).
 
 ## Seasonality

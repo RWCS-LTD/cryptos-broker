@@ -9,9 +9,14 @@ across every live HyperLiquid market: crypto, plus tokenised stocks, metals, ene
 
 **[cryptos.broker](https://cryptos.broker)**
 
-[![Live API](https://img.shields.io/badge/API-live-00d4aa)](https://cryptos.broker/api/health)
-[![Free tier](https://img.shields.io/badge/free%20tier-no%20account-7ab8ff)](#whats-free-no-account-required)
-[![Track record](https://img.shields.io/badge/track%20record-published-a78bfa)](https://cryptos.broker/strategies)
+[![live markets](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcryptos.broker%2Fapi%2Fmarket%2Fglobal&query=%24.data.assets_count&label=live%20markets&color=00d4aa&style=flat-square)](https://cryptos.broker/api/market/global)
+[![forecasts scored](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcryptos.broker%2Fapi%2Fkronos%2Faccuracy&query=%24.data.overall.n_total&label=forecasts%20scored&color=7ab8ff&style=flat-square)](https://cryptos.broker/api/kronos/accuracy)
+[![paper trades](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcryptos.broker%2Fapi%2Fstrategies%2Flab-record&query=%24.paper_trades_total&label=paper%20trades%20published&color=a78bfa&style=flat-square)](https://cryptos.broker/api/strategies)
+[![strategies listed](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcryptos.broker%2Fapi%2Fstrategies%2Flab-record&query=%24.listed&label=strategies%20listed&color=ffa502&style=flat-square)](https://cryptos.broker/strategies)
+
+*Those badges are fetched live from the public API every time this page loads. If one reads
+`inaccessible`, the API is down and you are seeing that fact rather than a number we typed in
+once and forgot.*
 
 </div>
 
@@ -19,50 +24,55 @@ across every live HyperLiquid market: crypto, plus tokenised stocks, metals, ene
 
 ## Start here: the number most platforms hide
 
-Across every strategy CRYPTOS has ever published and forward-tracked on paper:
+Every strategy CRYPTOS has ever published, forward-tracked on paper, winners and losers in
+one table:
 
+<!-- LIVE:record -->
 | | |
 |---|---|
 | Strategies listed | **32** |
 | Proven | **5** |
 | **Retired / removed** | **35** |
 | **Underperforming, still listed** | **12** |
-| Forward paper trades recorded | **2,258** |
+| Forward paper trades recorded | **2,262** |
 | Evaluated strategies that are net positive | **14 of 31** |
-| **Average net result across all evaluated** | **−9.1%** |
+| **Average net result across all evaluated** | **-9.5%** |
+<!-- /LIVE:record -->
 
-That average is negative, it is on the front page of this README, and it is
-[live at `/api/strategies/lab-record`](https://cryptos.broker/api/strategies/lab-record) —
-recomputed from the database, not typed by hand, so it cannot be quietly improved.
+That average is negative, it is at the top of this README, and it is
+**[live at `/api/strategies/lab-record`](https://cryptos.broker/api/strategies/lab-record)** —
+recomputed from the database on every request, so it cannot be quietly improved. The table
+above is regenerated from that endpoint by a scheduled job, not typed by hand.
 
-The retired experiments are published with their reasons. The largest:
+The retired experiments are published with their reasons. The largest, in full:
 
 > **Top Picks — daily candidate generator.** Retired 2026-07-17. 122 resolved signals
 > returned **+0.96R in total** — no edge — and **113 of the 122 were short during a rising
 > market**. Shut off. The 29 picks still open at retirement were **voided rather than
 > resolved**, so no outcome is invented from hindsight.
 
-Anyone can show you winners. The reason to read the rest of this page is that the losers
-are in the same table, with the same denominator.
+Anyone can show you winners. The reason to keep reading is that the losers are in the same
+table, with the same denominator.
 
 ### The AI publishes its own report card too
 
-38,435 scored forecasts over 180 days, live at
-[`/api/kronos/accuracy`](https://cryptos.broker/api/kronos/accuracy):
-
+<!-- LIVE:calibration -->
 | Model confidence | 4-day directional hit rate | Sample |
 |---|---|---|
-| 0.0 – 0.2 | 47.5% | 1,697 |
-| 0.2 – 0.4 | 49.2% | 3,389 |
-| 0.4 – 0.6 | 50.7% | 7,661 |
-| 0.6 – 0.8 | 52.9% | 21,202 |
-| **0.8 – 1.0** | **54.1%** | 4,486 |
+| 0.0–0.2 | 47.5% | 1,697 |
+| 0.2–0.4 | 49.2% | 3,389 |
+| 0.4–0.6 | 50.7% | 7,661 |
+| 0.6–0.8 | 52.9% | 21,202 |
+| **0.8–1.0** | **54.1%** | 4,486 |
 
-The headline number is 52% — barely a coin flip, and we publish that rather than hiding it.
-**The bucket breakdown is the actual finding:** the hit rate climbs monotonically with the
+*38,435 scored forecasts over 180 days. Headline hit rate: 52.0%.*
+<!-- /LIVE:calibration -->
+
+The headline hit rate is barely better than a coin flip, and we publish that instead of
+hiding it. **The bucket breakdown is the actual finding:** the hit rate climbs with the
 model's own stated confidence. That is calibration evidence — it means the confidence score
-carries real information, so you can act on the top bucket instead of the average. You could
-not verify that claim if only the headline were published, which is why the buckets are.
+carries real information, so you can act on the top bucket rather than the average. You could
+not check that claim if only the headline were published, which is why the buckets are.
 
 ---
 
@@ -70,20 +80,24 @@ not verify that claim if only the headline were published, which is why the buck
 
 Serious positioning data is priced for institutions and sold in pieces. Funding analytics is
 one subscription. On-chain is another. A smart-money tracker is a third. A backtester is a
-fourth. Each is $39–129/month, each has its own login, and none of them talk to each other —
-so you end up as the integration layer, holding six tabs open and reconciling them by eye.
+fourth. Each has its own login and its own bill, and none of them talk to each other — so you
+end up as the integration layer, holding six tabs open and reconciling them by eye.
 
 CRYPTOS is the argument that a single operator with direct exchange feeds and no incentive to
 upsell can put the whole picture on one screen. **No inside connections, no institutional
 minimum, no sales call.** Everything below is either free to anyone with a browser, or
-included in one $29.99/month subscription.
+included in one subscription.
 
 ---
 
 ## What's free (no account required)
 
-These endpoints and pages serve real data to anonymous visitors. No sign-up, no key, no
-email. Verified live — every one returns `200` to a fresh anonymous request.
+Real data to anonymous callers. No sign-up, no key, no email. Every endpoint here was
+verified to return `200` to a fresh anonymous request from the open internet.
+
+<!-- LIVE:market -->
+**308 live markets** · **$13.6B** open interest · **9,135** quality-scored traders tracked of 18,232
+<!-- /LIVE:market -->
 
 | What | Where |
 |---|---|
@@ -91,14 +105,14 @@ email. Verified live — every one returns `200` to a fresh anonymous request.
 | **Daily digest** — biggest movers, funding extremes, macro regime, next macro event | [`/api/market/today`](https://cryptos.broker/api/market/today) |
 | **Market overview** — every live market with price, OI, funding | [`/api/market/overview`](https://cryptos.broker/api/market/overview) |
 | **Funding extremes** — the most crowded longs and shorts | [`/api/market/funding/extremes`](https://cryptos.broker/api/market/funding/extremes) |
-| **AI forecast accuracy** — hit rate by confidence bucket, thousands of scored predictions | [`/api/kronos/accuracy`](https://cryptos.broker/api/kronos/accuracy) |
+| **AI forecast accuracy** — hit rate by confidence bucket | [`/api/kronos/accuracy`](https://cryptos.broker/api/kronos/accuracy) |
 | **Every strategy's full record** — IS/OOS metrics and live paper results, *including the underperformers* | [`/api/strategies`](https://cryptos.broker/api/strategies) |
 | **The lab record** — the aggregate above | [`/api/strategies/lab-record`](https://cryptos.broker/api/strategies/lab-record) |
 | **BTC cycle summary** — cycle quality score, zone, age | [`/api/cycle/btc/summary`](https://cryptos.broker/api/cycle/btc/summary) |
 | **BTC on-chain** — live node data | [`/api/market/btc/onchain`](https://cryptos.broker/api/market/btc/onchain) |
-| **BTC seasonality** — today's historical edge | [`/api/market/btc/seasonality/today`](https://cryptos.broker/api/market/btc/seasonality/today) |
+| **BTC seasonality** — today's historical edge, with sample size | [`/api/market/btc/seasonality/today`](https://cryptos.broker/api/market/btc/seasonality/today) |
 | **Macro regime** — the current growth/inflation quadrant | [`/api/market/macro`](https://cryptos.broker/api/market/macro) |
-| **CRYPTOS Campus** — 102-lesson trading curriculum, free, no account | [cryptos.broker/campus](https://cryptos.broker/campus) |
+| **CRYPTOS Campus** — full trading curriculum, free, no account | [cryptos.broker/campus](https://cryptos.broker/campus) |
 | **Methodology** — how every signal is built and validated | [cryptos.broker/methodology](https://cryptos.broker/methodology) |
 
 Full reference with response shapes: **[`docs/api.md`](docs/api.md)**.
@@ -106,32 +120,33 @@ Python client: **[`client/`](client/)** — standard library only, nothing to in
 
 ### The free tier is deliberately a real tier
 
-Free is not a teaser that shows you an empty chart and asks for a card. **The entire
-published track record is free — including the parts that make CRYPTOS look bad** — because
-a record you can only see after paying isn't a record, it's a brochure. The whole 102-lesson
-Campus is free for the same reason.
+Free is not a teaser that shows an empty chart and asks for a card. **The entire published
+track record is free — including the parts that make CRYPTOS look bad** — because a record
+you can only see after paying isn't a record, it's a brochure. The whole Campus curriculum is
+free for the same reason.
 
 What Pro buys is the **live signal**: not *what happened*, but *what is firing right now*.
 
 ---
 
-## What Pro adds — $29.99/mo or $299/yr
+## What Pro adds
 
-7-day free trial, cancel anytime, nothing charged before the trial ends.
+A 7-day free trial, cancel anytime, nothing charged before the trial ends.
+**[Current pricing →](https://cryptos.broker)**
 
 | | |
 |---|---|
 | **Operator cockpit** | The EMA×Sigma Signal Board — every tracked asset ranked by proximity to firing, with entry, stop, target, R:R and real per-asset max leverage. It informs and recommends; **you make every call.** |
 | **CRYPTOS AI** | A trading assistant wired to every live data point on the platform. |
-| **Kronos AI predictions** | 1-day and 4-day forecasts across 250+ assets with confidence scores — and the [accuracy record](https://cryptos.broker/api/kronos/accuracy) is public so you can price the confidence before you trust it. |
-| **Full market depth** | All live markets with OI, funding, spread, supply/demand zones, relative strength vs BTC, project and community context. |
+| **Kronos AI predictions** | 1-day and 4-day forecasts across the tracked universe with confidence scores — and the [accuracy record](https://cryptos.broker/api/kronos/accuracy) is public, so you can price the confidence before you trust it. |
+| **Full market depth** | Every live market with OI, funding, spread, supply/demand zones, relative strength vs BTC, project and community context. |
 | **Active Alpha radar** | Funding extremes ranked by **z-score**, not raw rate — plus compression watch and a 15-minute execution-timing playbook by UTC hour. |
-| **Smart Money Board** | 9,000+ quality-scored traders, live positions and consensus positioning, refreshed every 5 minutes. |
+| **Smart Money Board** | Thousands of quality-scored traders, live positions and consensus positioning, refreshed every few minutes. |
 | **Macro Regime dashboard** | A 5-layer synthesis into a TRADE / CAUTION / NO_TRADE permission gate. It vetoes exposure; it does not pick trades. |
 | **Strategy backtester** | Visual builder, plain-English AI Assist, a 24-variation engine sweep, and walk-forward IS/OOS validation on held-out data. |
 | **Slapper Library** | Certified strategies, re-validated on clean data, published only after review. |
-| **Alerts** | Market conditions, strategy fires, AI-built custom logic — delivered in-app, by email, browser push, or Telegram. |
-| **Events calendar** | 60 days of FOMC, CPI, NFP, PCE and CME expiry, with quantified historical impact per event type across four time windows. |
+| **Alerts** | Market conditions, strategy fires, AI-built custom logic — in-app, email, browser push, or Telegram. |
+| **Events calendar** | FOMC, CPI, NFP, PCE and CME expiry, with quantified historical impact per event type across four time windows. |
 
 Side-by-side breakdown: **[`docs/free-vs-pro.md`](docs/free-vs-pro.md)**.
 
@@ -139,21 +154,22 @@ Side-by-side breakdown: **[`docs/free-vs-pro.md`](docs/free-vs-pro.md)**.
 
 ## How it's built to not lie to you
 
-Four rules the platform holds itself to. They are enforced in code, not promised in copy.
+Four rules the platform holds itself to. They are enforced in code, not promised in copy —
+and this repository is held to them as well, which is why the numbers above are generated
+rather than typed.
 
-**1. Live-derived or absent.** Numbers on the site are computed from the database at request
-time. When a data source fails, the page renders **without the number** rather than falling
-back to a stale hardcoded one. A fallback that looks like a measurement is worse than a gap.
+**1. Live-derived or absent.** Numbers are computed from the database at request time. When a
+source fails, the page renders **without the number** rather than falling back to a stale
+one. A gap is self-evidently a gap; a stale number is a lie with good posture.
 
 **2. Zero assets is a failure to measure, never a measurement of zero.** If a pipeline breaks
 and produces an empty result, the write is refused and the staleness alarm fires. Broken
 systems are supposed to look broken.
 
-**3. Published records include the failures, or they aren't records.** Showing only winners
-is the violation — so the 12 underperforming strategies stay listed with full metrics, and
-retired experiments keep their reasons attached. Unresolved positions are **voided, never
-resolved from hindsight**, and reported separately so the denominator can't be improved by
-dropping the unknowns.
+**3. Published records include the failures, or they aren't records.** The underperforming
+strategies stay listed with full metrics. Retired experiments keep their reasons attached.
+Unresolved positions are **voided, never resolved from hindsight**, and reported separately
+so the denominator can't be improved by dropping the unknowns.
 
 **4. Descriptive surfaces never make calls.** The free daily digest reports what happened. It
 does not rank setups or imply direction. Top Picks is what happened when a daily surface
@@ -194,8 +210,8 @@ Plain-English definitions of the concepts this platform is built on — open int
 rates and z-scores, order-block zones, walk-forward validation, macro regime, smart-money
 positioning: **[`docs/glossary.md`](docs/glossary.md)**.
 
-If you're starting from zero, the free [102-lesson Campus](https://cryptos.broker/campus)
-covers the same ground properly, with no account required.
+Starting from zero? The free [CRYPTOS Campus](https://cryptos.broker/campus) covers the same
+ground properly, in order, with no account required.
 
 ---
 
@@ -213,14 +229,22 @@ covers the same ground properly, with no account required.
 
 ## About this repository
 
-This repo is the **public explainer and API client** for CRYPTOS. The platform itself —
-backend, frontend, data pipeline and trading systems — is closed source and stays that way.
+The **public explainer and API client** for CRYPTOS. The platform itself — backend, frontend,
+data pipeline and trading systems — is closed source and stays that way.
 
-Nothing here requires credentials. Every documented endpoint is one that already serves
-anonymous requests from the open internet.
+Nothing here requires credentials. Every documented endpoint already serves anonymous
+requests from the open internet.
 
-Client code is MIT licensed ([`LICENSE`](LICENSE)). Documentation and copy are
-CC BY 4.0 ([`LICENSE-docs`](LICENSE-docs)).
+**On the numbers.** Every figure in this README is either *frozen history* (a closed record
+that cannot change, such as a retired experiment's final tally) or *generated* from the live
+API by [`scripts/refresh_live_numbers.py`](scripts/refresh_live_numbers.py), which runs daily
+via GitHub Actions. There is deliberately no third category. If the API is unreachable the
+job fails and writes nothing, rather than publishing zeros — see rule 2 above.
+
+Client code is MIT licensed ([`LICENSE`](LICENSE)). Documentation and copy are CC BY 4.0
+([`LICENSE-docs`](LICENSE-docs)).
+
+*Live figures last refreshed: <!-- LIVE:stamp -->2026-08-23<!-- /LIVE:stamp --> (UTC).*
 
 ---
 

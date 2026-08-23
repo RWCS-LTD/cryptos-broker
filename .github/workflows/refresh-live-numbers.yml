@@ -1,0 +1,57 @@
+name: Refresh live numbers
+
+# Regenerates the <!-- LIVE:* --> blocks in README.md from the public CRYPTOS API.
+#
+# Free: GitHub Actions minutes are unlimited on public repositories.
+# No secrets, no API key — the script reads the same anonymous endpoints anyone can.
+#
+# If the API is unreachable the script exits non-zero and writes NOTHING, so this
+# job goes red and the README keeps its previous (visibly dated) content rather
+# than publishing zeros. That is deliberate — see docs/methodology.md §2.
+
+on:
+  schedule:
+    # 05:15 UTC daily. Offset off the hour: scheduled jobs on the hour queue
+    # behind everyone else's cron and can be delayed by many minutes.
+    - cron: "15 5 * * *"
+  workflow_dispatch:        # manual "Run workflow" button
+  push:
+    branches: [main]
+    paths:
+      - "scripts/refresh_live_numbers.py"
+      - ".github/workflows/refresh-live-numbers.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-live-numbers
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # No pip install: the script is standard library only, on purpose.
+      - name: Regenerate README blocks
+        run: python3 scripts/refresh_live_numbers.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "No change — README already current."
+            exit 0
+          fi
+          git config user.name  "cryptos-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: refresh live numbers from public API"
+          git push

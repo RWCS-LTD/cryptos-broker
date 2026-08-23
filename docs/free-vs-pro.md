@@ -1,8 +1,8 @@
 # Free vs Pro
 
 **Free** — no account, no card, no email. Open a browser or call the API.
-**Pro** — $29.99/month or $299/year (save 17%). 7-day free trial, cancel
-anytime, nothing charged before the trial ends.
+**Pro** — one subscription, monthly or annual. 7-day free trial, cancel anytime,
+nothing charged before the trial ends. **[Current pricing →](https://cryptos.broker)**
 
 ---
 
@@ -40,8 +40,8 @@ record, it's a brochure.
 | Last signal, live status, open positions | — | ✅ |
 | **Signals & tooling** | | |
 | Operator cockpit — EMA×Sigma Signal Board with entry/stop/target/RR | — | ✅ |
-| Kronos AI predictions — 1D/4D across 250+ assets | Accuracy only | Predictions + per-asset accuracy |
-| Smart Money Board — 9,000+ scored traders, live positions, consensus | — | ✅ |
+| Kronos AI predictions — 1D/4D across the tracked universe | Accuracy only | Predictions + per-asset accuracy |
+| Smart Money Board — thousands of scored traders, live positions, consensus | — | ✅ |
 | Top Traders leaderboard with equity curves | — | ✅ |
 | Macro Regime dashboard — 5-layer TRADE / CAUTION / NO_TRADE gate | Regime label only | Full 5-layer synthesis |
 | CRYPTOS AI assistant | — | ✅ |
@@ -51,7 +51,7 @@ record, it's a brochure.
 | Events calendar + quantified historical impact | Next event only | 60-day calendar, AI briefings, pre-event alerts, 6-asset impact heatmap |
 | BTC seasonality | Today + following days | Full 12×31 heatmap |
 | **Learning** | | |
-| CRYPTOS Campus — 102-lesson curriculum | ✅ | ✅ |
+| CRYPTOS Campus — full trading curriculum | ✅ | ✅ |
 | Campus AI tutor | ✅ | ✅ |
 | Graduation certificate | ✅ | ✅ |
 | Methodology documentation | ✅ | ✅ |
@@ -60,8 +60,8 @@ record, it's a brochure.
 
 ## What Pro actually costs you elsewhere
 
-The components of this exist as separate products. Assembled, they run
-**$39–129/month each**:
+The components of this exist as separate products, each with its own
+subscription and its own bill:
 
 | You'd otherwise buy | For |
 |---|---|
@@ -72,8 +72,9 @@ The components of this exist as separate products. Assembled, they run
 | A macro calendar with impact data | Event risk |
 
 Five logins, five bills, and you are the integration layer holding six tabs open
-and reconciling them by eye. CRYPTOS is one subscription at **$29.99/month**
-with the pieces already wired together.
+and reconciling them by eye. CRYPTOS is **one subscription** with the pieces
+already wired together — for materially less than the stack it replaces.
+[See current pricing →](https://cryptos.broker)
 
 ---
 
@@ -100,7 +101,7 @@ product with it in hand.
    cd client && python3 example.py
    ```
 2. Read the record — [cryptos.broker/strategies](https://cryptos.broker/strategies)
-3. Learn the concepts — [cryptos.broker/campus](https://cryptos.broker/campus), 102 free lessons
+3. Learn the concepts — [cryptos.broker/campus](https://cryptos.broker/campus), free, no account
 4. Understand the method — [cryptos.broker/methodology](https://cryptos.broker/methodology)
 
 If the free surface is useful and you want the live signal,

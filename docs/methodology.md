@@ -65,8 +65,8 @@ alarm fire, not publish an empty answer that satisfies its own monitoring.
 
 Concretely, this means:
 
-- The **12 underperforming strategies stay listed**, with full metrics, in the
-  same table and the same denominator as the winners.
+- The **underperforming strategies stay listed**, with full metrics, in the same
+  table and the same denominator as the winners.
 - **Retired experiments keep their reasons attached.** The largest is published
   in full: a daily candidate generator that produced 122 resolved signals for
   **+0.96R total** — no edge — with **113 of the 122 short during a rising
@@ -77,9 +77,10 @@ Concretely, this means:
   are reported as `voided_unresolved`, in a separate field, so the denominator
   cannot be improved by dropping the unknowns.
 - **The aggregate is public even though it's negative.** The average net result
-  across all evaluated strategies is currently **−9.1%**. It is on the front
-  page of this repository and live at
-  [`/api/strategies/lab-record`](https://cryptos.broker/api/strategies/lab-record).
+  across all evaluated strategies is negative, it is on the front page of this
+  repository, and it is live at
+  [`/api/strategies/lab-record`](https://cryptos.broker/api/strategies/lab-record)
+  — regenerated from the API rather than typed, so it cannot drift into flattery.
 
 Publishing an unflattering number is not modesty. It is the only thing that
 makes the flattering numbers worth reading, because it demonstrates that the

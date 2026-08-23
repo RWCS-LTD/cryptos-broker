@@ -160,17 +160,17 @@ Published accuracy of the Kronos AI forecasts.
 {
   "data": {
     "overall": { "n_total": 38435, "hit_rate_4d": 0.52, "lookback_days": 180 },
-    "buckets": [ { "bucket": "0.8–1.0", "hit_rate_4d": 0.541, "n_total": 4486 } ],
+    "buckets": [ { "bucket": "0.8–1.0", "hit_rate_4d": 0.541, "n_total": 4486 } ],  // illustrative
     "per_asset": [ ... ]
   }
 }
 ```
 
-**The buckets are the point, not the overall number.** A 52% overall hit rate is
-barely a coin flip. What makes the forecast usable is that the hit rate climbs
-monotonically with the model's own stated confidence — so the confidence score
-carries real information, and you can act on the top bucket rather than the
-average.
+**The buckets are the point, not the overall number.** The overall hit rate sits
+close to a coin flip. What makes the forecast usable is that the hit rate climbs
+with the model's own stated confidence — so the confidence score carries real
+information, and you can act on the top bucket rather than the average. (Values
+above are an illustrative shape; call the endpoint for current figures.)
 
 Kronos is a third-party open-source model. **The proprietary asset is the
 measurement, not the model** — which is why the measurement is public.
@@ -189,8 +189,8 @@ Every listed strategy with full metrics.
 | Live paper record | `paper_started_at`, `paper_trades`, `paper_net_pct`, `paper_win_rate`, `paper_pf`, `paper_max_dd` |
 | State | `status`, `updated_at` |
 
-**Includes the underperformers.** Twelve of the currently listed strategies are
-classified `underperforming` and keep their full metrics on display.
+**Includes the underperformers.** Strategies classified `underperforming` stay
+listed and keep their full metrics on display.
 
 Pro adds `params` (the actual rule set), `last_signal`, `last_signal_at`,
 `live_status`, the signal feed and open positions. The public field set is an
