@@ -34,7 +34,7 @@ one table:
 | Proven | **6** |
 | **Retired / removed** | **35** |
 | **Underperforming, still listed** | **11** |
-| Forward paper trades recorded | **2,326** |
+| Forward paper trades recorded | **2,347** |
 | Evaluated strategies that are net positive | **15 of 31** |
 | **Average net result across all evaluated** | **-7.2%** |
 <!-- /LIVE:record -->
@@ -59,13 +59,13 @@ table, with the same denominator.
 <!-- LIVE:calibration -->
 | Model confidence | 4-day directional hit rate | Sample |
 |---|---|---|
-| 0.0–0.2 | 47.6% | 1,701 |
-| 0.2–0.4 | 49.5% | 3,411 |
-| 0.4–0.6 | 50.7% | 7,651 |
-| 0.6–0.8 | 52.8% | 21,341 |
-| **0.8–1.0** | **53.8%** | 4,630 |
+| 0.0–0.2 | 47.5% | 1,705 |
+| 0.2–0.4 | 49.7% | 3,418 |
+| 0.4–0.6 | 50.8% | 7,622 |
+| 0.6–0.8 | 52.9% | 21,393 |
+| **0.8–1.0** | **53.9%** | 4,671 |
 
-*38,734 scored forecasts over 180 days. Headline hit rate: 52.0%.*
+*38,809 scored forecasts over 180 days. Headline hit rate: 52.1%.*
 <!-- /LIVE:calibration -->
 
 The headline hit rate is barely better than a coin flip, and we publish that instead of
@@ -96,7 +96,7 @@ Real data to anonymous callers. No sign-up, no key, no email. Every endpoint her
 verified to return `200` to a fresh anonymous request from the open internet.
 
 <!-- LIVE:market -->
-**309 live markets** · **$14.0B** open interest · **9,282** quality-scored traders tracked of 18,608
+**311 live markets** · **$13.4B** open interest · **9,349** quality-scored traders tracked of 18,732
 <!-- /LIVE:market -->
 
 | What | Where |
@@ -244,7 +244,7 @@ job fails and writes nothing, rather than publishing zeros — see rule 2 above.
 Client code is MIT licensed ([`LICENSE`](LICENSE)). Documentation and copy are CC BY 4.0
 ([`LICENSE-docs`](LICENSE-docs)).
 
-*Live figures last refreshed: <!-- LIVE:stamp -->2026-08-27<!-- /LIVE:stamp --> (UTC).*
+*Live figures last refreshed: <!-- LIVE:stamp -->2026-08-28<!-- /LIVE:stamp --> (UTC).*
 
 ---
 
