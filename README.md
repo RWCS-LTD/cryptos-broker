@@ -34,9 +34,9 @@ one table:
 | Proven | **6** |
 | **Retired / removed** | **35** |
 | **Underperforming, still listed** | **12** |
-| Forward paper trades recorded | **3,041** |
+| Forward paper trades recorded | **3,062** |
 | Evaluated strategies that are net positive | **17 of 31** |
-| **Average net result across all evaluated** | **-3.2%** |
+| **Average net result across all evaluated** | **-3.6%** |
 <!-- /LIVE:record -->
 
 That average is negative, it is at the top of this README, and it is
@@ -59,13 +59,13 @@ table, with the same denominator.
 <!-- LIVE:calibration -->
 | Model confidence | 4-day directional hit rate | Sample |
 |---|---|---|
-| 0.0–0.2 | 47.8% | 1,787 |
-| 0.2–0.4 | 49.9% | 3,549 |
-| 0.4–0.6 | 50.3% | 7,941 |
-| 0.6–0.8 | 51.8% | 22,809 |
-| **0.8–1.0** | **52.5%** | 5,231 |
+| 0.0–0.2 | 47.9% | 1,785 |
+| 0.2–0.4 | 49.8% | 3,545 |
+| 0.4–0.6 | 50.3% | 7,961 |
+| 0.6–0.8 | 51.7% | 22,868 |
+| **0.8–1.0** | **52.3%** | 5,217 |
 
-*41,317 scored forecasts over 180 days. Headline hit rate: 51.3%.*
+*41,376 scored forecasts over 180 days. Headline hit rate: 51.2%.*
 <!-- /LIVE:calibration -->
 
 The headline hit rate is barely better than a coin flip, and we publish that instead of
@@ -96,7 +96,7 @@ Real data to anonymous callers. No sign-up, no key, no email. Every endpoint her
 verified to return `200` to a fresh anonymous request from the open internet.
 
 <!-- LIVE:market -->
-**329 live markets** · **$17.2B** open interest · **10,871** quality-scored traders tracked of 21,656
+**328 live markets** · **$17.6B** open interest · **10,909** quality-scored traders tracked of 21,721
 <!-- /LIVE:market -->
 
 | What | Where |
@@ -244,7 +244,7 @@ job fails and writes nothing, rather than publishing zeros — see rule 2 above.
 Client code is MIT licensed ([`LICENSE`](LICENSE)). Documentation and copy are CC BY 4.0
 ([`LICENSE-docs`](LICENSE-docs)).
 
-*Live figures last refreshed: <!-- LIVE:stamp -->2026-10-05<!-- /LIVE:stamp --> (UTC).*
+*Live figures last refreshed: <!-- LIVE:stamp -->2026-10-06<!-- /LIVE:stamp --> (UTC).*
 
 ---
 
