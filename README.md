@@ -33,10 +33,10 @@ one table:
 | Strategies listed | **32** |
 | Proven | **6** |
 | **Retired / removed** | **35** |
-| **Underperforming, still listed** | **11** |
-| Forward paper trades recorded | **3,847** |
-| Evaluated strategies that are net positive | **19 of 31** |
-| **Average net result across all evaluated** | **+1.0%** |
+| **Underperforming, still listed** | **12** |
+| Forward paper trades recorded | **3,866** |
+| Evaluated strategies that are net positive | **18 of 31** |
+| **Average net result across all evaluated** | **+2.1%** |
 <!-- /LIVE:record -->
 
 That average is negative, it is at the top of this README, and it is
@@ -59,13 +59,13 @@ table, with the same denominator.
 <!-- LIVE:calibration -->
 | Model confidence | 4-day directional hit rate | Sample |
 |---|---|---|
-| 0.0–0.2 | 47.9% | 1,934 |
-| 0.2–0.4 | 50.3% | 3,693 |
-| 0.4–0.6 | 49.3% | 8,578 |
-| 0.6–0.8 | 50.4% | 24,922 |
-| **0.8–1.0** | **52.6%** | 5,493 |
+| 0.0–0.2 | 48.0% | 1,931 |
+| 0.2–0.4 | 50.3% | 3,691 |
+| 0.4–0.6 | 49.5% | 8,586 |
+| 0.6–0.8 | 50.4% | 24,970 |
+| **0.8–1.0** | **52.6%** | 5,510 |
 
-*44,620 scored forecasts over 180 days. Headline hit rate: 50.3%.*
+*44,688 scored forecasts over 180 days. Headline hit rate: 50.4%.*
 <!-- /LIVE:calibration -->
 
 The headline hit rate is barely better than a coin flip, and we publish that instead of
@@ -96,7 +96,7 @@ Real data to anonymous callers. No sign-up, no key, no email. Every endpoint her
 verified to return `200` to a fresh anonymous request from the open internet.
 
 <!-- LIVE:market -->
-**348 live markets** · **$9.6B** open interest · **12,364** quality-scored traders tracked of 24,702
+**353 live markets** · **$10.2B** open interest · **12,404** quality-scored traders tracked of 24,777
 <!-- /LIVE:market -->
 
 | What | Where |
@@ -244,7 +244,7 @@ job fails and writes nothing, rather than publishing zeros — see rule 2 above.
 Client code is MIT licensed ([`LICENSE`](LICENSE)). Documentation and copy are CC BY 4.0
 ([`LICENSE-docs`](LICENSE-docs)).
 
-*Live figures last refreshed: <!-- LIVE:stamp -->2026-11-25<!-- /LIVE:stamp --> (UTC).*
+*Live figures last refreshed: <!-- LIVE:stamp -->2026-11-26<!-- /LIVE:stamp --> (UTC).*
 
 ---
 
